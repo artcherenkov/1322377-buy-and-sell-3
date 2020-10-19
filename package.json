@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm run eslint",
     "eslint": "eslint --ext .js src/",
-    "start": "node ./src/service/service.js"
+    "start": "node ./src/service/service.js",
+    "start.dev": "nodemon ./src/main.js"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,12 @@
     "url": "https://github.com/artcherenkov/1322377-buy-and-sell-3/issues"
   },
   "homepage": "https://github.com/artcherenkov/1322377-buy-and-sell-3#readme",
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "4.1.0"
+  },
   "devDependencies": {
     "eslint": "7.11.0",
-    "eslint-config-htmlacademy": "0.6.0"
+    "eslint-config-htmlacademy": "0.6.0",
+    "nodemon": "2.0.5"
   }
 }
