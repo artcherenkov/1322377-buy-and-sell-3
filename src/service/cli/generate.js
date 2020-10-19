@@ -40,6 +40,10 @@ const readContent = async (filePath) => {
 };
 
 const generateOffers = (count, titles, categories, sentences) => {
+  titles = titles.filter((title) => title !== ``);
+  categories = categories.filter((category) => category !== ``);
+  sentences = sentences.filter((sentence) => sentence !== ``);
+
   return Array(count).fill({}).map(() => ({
     category: [categories[getRandomInt(0, categories.length - 1)]],
     description: shuffle(sentences).slice(1, 5).join(` `),
