@@ -5,6 +5,9 @@ const DEFAULT_PORT = 8080;
 
 const app = express();
 
+app.set(`views`, `./templates`);
+app.set(`view engine`, `pug`);
+
 const myRoutes = require(`./routes/my-routes`);
 const offersRoutes = require(`./routes/offers-routes`);
 const mainRoutes = require(`./routes/main-routes`);
